@@ -57,7 +57,7 @@ function App() {
             <FaMoon className="theme-icon" />
           )}
         </button>
-        <h1>Olumsuz İş başvurularına yanıt vermeyen şirketler listesi</h1>
+        <h1>İş başvurularına geri bildirimde bulunmayan şirketler</h1>
 
         <button onClick={toggleDarkMode} className="theme-toggle-button">
           {darkMode ? (
