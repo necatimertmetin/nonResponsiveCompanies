@@ -18,4 +18,7 @@ Bu proje, belirli bir Firebase Realtime Database'den alınan şirket isimlerini 
 
 1. **Proje Klasörüne Git**:
    ```bash
-   cd your-project-directory
+   cd nonResponsiveCompanies
+   npm install
+   npm run dev
+   
