@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { ref, onValue } from "firebase/database";
 import { database } from "./firebaseConfig"; // Firebase yapılandırmasını içe aktar
 import "./App.css";
-import { FaTimes, FaRegStar } from "react-icons/fa"; // FaTimes ve FaRegStar, Font Awesome'dan "X" ve boş yıldız ikonları
-import { FaSun, FaMoon } from "react-icons/fa"; // Güneş ve ay ikonları
+import { FaTimes, FaSun, FaMoon  } from "react-icons/fa"; // FaTimes ve FaRegStar, Font Awesome'dan "X" ve boş yıldız ikonları
 import { TiTick } from "react-icons/ti";
 
 function App() {
