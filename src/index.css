@@ -1,0 +1,131 @@
+/* Temel stiller */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Beyaz tema arka planı */
+  color: #333; /* Yazı rengi */
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s; /* Geçiş efektleri */
+}
+
+/* Koyu tema için CSS değişkenleri */
+:root {
+  --background-color: #222; /* Koyu tema arka planı */
+  --text-color: #f5f5f5; /* Koyu tema yazı rengi */
+  --company-background-color: #151515; /* Koyu tema şirket arka planı */
+  --company-border-color: red; /* Koyu tema "X" ikonu rengi */
+  --theme-toggle-background: #111; /* Koyu tema buton arka plan rengi */
+  --theme-toggle-hover: #333; /* Koyu tema buton hover rengi */
+  --search-border-color: #ccc; /* Koyu tema arama çubuğu kenar rengi */
+  --tick: lime;
+}
+
+/* Beyaz tema için CSS değişkenleri */
+body:not(.dark-mode) {
+  --background-color: #f5f5f5; /* Beyaz tema arka planı */
+  --text-color: #333; /* Beyaz tema yazı rengi */
+  --company-background-color: #ffffff; /* Beyaz tema şirket arka planı */
+  --company-border-color: #000; /* Beyaz tema "X" ikonu rengi */
+  --theme-toggle-background: #007bff; /* Beyaz tema buton arka plan rengi */
+  --theme-toggle-hover: #0056b3; /* Beyaz tema buton hover rengi */
+  --search-border-color: #ccc; /* Beyaz tema arama çubuğu kenar rengi */
+  --tick: #151515;
+}
+
+h1{
+  text-transform: capitalize;
+}
+
+/* Koyu tema için body stilleri */
+body.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+.title-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 50px 0px
+}
+.companies-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.company-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--company-background-color); /* Şirket arka planı */
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.times-icon {
+  color: var(--company-border-color); /* "X" ikonu rengi */
+  border: 2px solid var(--company-border-color); /* "X" ikonu kenar rengi */
+  border-radius: 100%;
+  padding: 5px;
+}
+
+/* Tema değiştirme butonu stilleri */
+.theme-toggle-button {
+  width: 40px; /* Buton genişliği */
+  height: 40px; /* Buton yüksekliği */
+  background-color: var(--theme-toggle-background); /* Buton arka plan rengi */
+  color: white; /* Beyaz ikon rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 50%; /* Yuvarlak buton */
+  cursor: pointer; /* İmleç el işareti */
+  transition: background-color 0.3s; /* Geçiş efekti */
+  display: flex; /* Flexbox kullanımı */
+  align-items: center; /* Yatay ortalama */
+  justify-content: center; /* Dikey ortalama */
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--theme-toggle-hover); /* Hover rengi */
+}
+
+/* Arama çubuğu stilleri */
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--search-border-color); /* Arama çubuğu kenar rengi */
+  background-color: var(--company-background-color);
+  color: var(--text-color);
+  border-radius: 5px; /* Yuvarlatılmış kenarlar */
+  width: 100%; /* Genişlik tam */
+  max-width: 400px; /* Maksimum genişlik */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; /* Alt boşluk */
+  transition: border-color 0.3s; /* Geçiş efekti */
+  font-size: 18px;
+  
+}
+
+.search-bar:focus {
+  border-color: var(--theme-toggle-background); /* Mavi kenarlık odaklanınca */
+  outline: none; /* Kenar çizgisi yok */
+}
+
+/* Tema ikonlarının boyutu */
+.theme-icon {
+  width: 20px; /* İkon genişliği */
+  height: 20px; /* İkon yüksekliği */
+}
+.tick-icon{
+  color: var(--tick); /* "X" ikonu rengi */
+  border: 2px solid var(--tick); /* "X" ikonu rengi */
+  border-radius: 100%;
+  padding: 5px;
+}
